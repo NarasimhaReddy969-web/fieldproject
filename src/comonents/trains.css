@@ -1,0 +1,162 @@
+/* Train Booking Styles */
+.train-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.booking-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(30px);
+  opacity: 1;
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-form h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.booking-form label {
+  font-size: 1.1rem;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.booking-form select,
+.booking-form input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form select:focus,
+.booking-form input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.booking-form button {
+  width: 100%;
+  background-color: #ff6f61;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.booking-form button:hover {
+  background-color: #e74c3c;
+  transform: translateY(-3px);
+}
+
+/* Ticket Preview Styling */
+.ticket-preview {
+  background: linear-gradient(135deg, #8e44ad, #e91e63);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ticket-preview h2 {
+  font-size: 36px;
+  color: #f0f3f4;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.ticket-preview p {
+  font-size: 20px;
+  color: #f1c40f;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.ticket-preview button {
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ticket-preview button:hover {
+  background-color: #2ecc71;
+  transform: translateY(-3px);
+}
+
+/* Success Message Styling */
+.booking-message {
+  color: #27ae60;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

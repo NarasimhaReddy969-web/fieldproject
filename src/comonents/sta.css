@@ -1,0 +1,265 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e0f7fa;
+  color: #34495e;
+  overflow-x: hidden;
+}
+
+/* Main Stadium Booking Container */
+.stadium-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff6f61, #6a1b9a, #008080);
+  background-size: 300% 300%;
+  animation: gradientAnimation 20s ease infinite;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Stylish Booking Form */
+.booking-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 700px;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  animation: formEntrance 1s ease-out;
+  position: relative;
+  z-index: 5;
+}
+
+@keyframes formEntrance {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.booking-form h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #2c3e50;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Input, Select, and Button Styling */
+.booking-form select, .booking-form input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.booking-form select:focus, .booking-form input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+/* Hover Effect for Inputs */
+.booking-form select:hover, .booking-form input:hover {
+  background-color: #f0f0f0;
+}
+
+/* Button with Hover and Active Effects */
+.booking-form button {
+  width: 100%;
+  background: linear-gradient(45deg, #3498db, #2ecc71);
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.booking-form button:active {
+  transform: scale(1);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ticket Preview with 3D Effect */
+.ticket-preview {
+  background: linear-gradient(45deg, #f39c12, #f1c40f);
+  color: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  animation: ticketPopIn 0.8s ease-out, ticketHover 3s infinite ease-in-out;
+}
+
+/* 3D Pop-in Effect for Ticket */
+@keyframes ticketPopIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes ticketHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.ticket-preview h2 {
+  font-size: 3rem;
+  color: #2c3e50;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.ticket-preview p {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+/* Glowing Button for Ticket Preview */
+.ticket-preview button {
+  width: 100%;
+  background: #27ae60;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.8);
+}
+
+.ticket-preview button:hover {
+  transform: scale(1.05);
+  background: #2ecc71;
+  box-shadow: 0 0 40px rgba(39, 174, 96, 0.8);
+}
+
+.ticket-preview button:active {
+  transform: scale(1);
+  background: #2ecc71;
+  box-shadow: 0 0 20px rgba(39, 174, 96, 0.5);
+}
+
+/* Booking Confirmation Message */
+.booking-message {
+  font-size: 1.2rem;
+  color: #27ae60;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* Floating Elements & Hover Effects */
+.booking-form select, .booking-form input {
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.booking-form select:hover, .booking-form input:hover {
+  transform: translateY(-2px);
+}
+
+.booking-form select:focus, .booking-form input:focus {
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+}
+
+/* Glowing Animation for Inputs */
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 8px #3498db, 0 0 15px #3498db;
+  }
+  50% {
+    box-shadow: 0 0 18px #2ecc71, 0 0 35px #2ecc71;
+  }
+  100% {
+    box-shadow: 0 0 8px #3498db, 0 0 15px #3498db;
+  }
+}
+
+.booking-form select:focus, .booking-form input:focus {
+  animation: glowAnimation 1.5s infinite alternate;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .stadium-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .booking-form {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .ticket-preview {
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+  .booking-form h1 {
+    font-size: 2.2rem;
+  }
+
+  .ticket-preview h2 {
+    font-size: 2.5rem;
+  }
+}
